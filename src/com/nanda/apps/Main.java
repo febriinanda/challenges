@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
         NandaCls nandaObj = new NandaCls(5);
-        nandaObj.pattern4();
+        nandaObj.pattern5();
         System.out.println(nandaObj.getPattern());
     }
 }
