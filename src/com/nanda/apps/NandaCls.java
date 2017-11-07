@@ -154,4 +154,31 @@ class NandaCls {
         }
         this.setPattern(res.toString());
     }
+
+    void pattern5(){
+        /*
+        54321
+         5432
+          543
+           54
+            5
+         */
+        StringBuilder res = new StringBuilder();
+        int n = this.n;
+        for (int i = 0; i < n; i++){
+            int k = 5;
+            for (int j = 0; j <= n; j++){
+                if (j == n){
+                    res.append("\n");
+                }else{
+                    if (j > i - 1){
+                        res.append(k--);
+                    }else{
+                        res.append(" ");
+                    }
+                }
+            }
+        }
+        this.setPattern(res.toString());
+    }
 }
