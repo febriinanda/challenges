@@ -107,4 +107,78 @@ class NandaCls {
         }
         this.setPattern(res.toString());
     }
+
+    void pattern4(){
+        /*
+        54321
+         5432
+          543
+           54
+            5
+            45
+            345
+            2345
+            12345
+         */
+        StringBuilder res = new StringBuilder();
+        int n = this.n;
+        for (int i = 0; i < (n*2)-1; i++){
+            int k = 5;
+            if (i < n){
+               for (int j = 0; j <= n; j++){
+                   if (j == n){
+                       res.append("\n");
+                   }else{
+                       if (j > i - 1){
+                           res.append(k--);
+                       }else{
+                           res.append(" ");
+                       }
+                   }
+               }
+            }else{
+                k = k - (i - k + 1);
+                for (int j = 0; j <= (i + 1); j++){
+                    if (j < n - 1){
+                        res.append(" ");
+                    }else{
+                        if (j == i + 1){
+                            res.append("\n");
+                        }else{
+                            res.append(k++);
+                        }
+                    }
+                }
+
+            }
+        }
+        this.setPattern(res.toString());
+    }
+
+    void pattern5(){
+        /*
+        54321
+         5432
+          543
+           54
+            5
+         */
+        StringBuilder res = new StringBuilder();
+        int n = this.n;
+        for (int i = 0; i < n; i++){
+            int k = 5;
+            for (int j = 0; j <= n; j++){
+                if (j == n){
+                    res.append("\n");
+                }else{
+                    if (j > i - 1){
+                        res.append(k--);
+                    }else{
+                        res.append(" ");
+                    }
+                }
+            }
+        }
+        this.setPattern(res.toString());
+    }
 }
