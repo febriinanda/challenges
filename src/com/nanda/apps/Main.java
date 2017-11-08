@@ -4,8 +4,10 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here test commit
-        NandaCls nandaObj = new NandaCls(5);
-        nandaObj.pattern10();
-        System.out.println(nandaObj.getPattern());
+
+        NumberPattern patternObj = new NumberPattern(5);
+        patternObj.pattern10();
+        System.out.println(patternObj.getPattern());
+
     }
 }
