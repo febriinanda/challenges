@@ -131,7 +131,7 @@ public class NumberPattern {
         StringBuilder res = new StringBuilder();
         int n = this.input;
         for (int i = 0; i < (n*2)-1; i++){
-            int k = 5;
+            int k = n;
             if (i < n){
                 for (int j = 0; j <= n; j++){
                     if (j == n){
@@ -174,7 +174,7 @@ public class NumberPattern {
         StringBuilder res = new StringBuilder();
         int n = this.input;
         for (int i = 0; i < n; i++){
-            int k = 5;
+            int k = n;
             for (int j = 0; j <= n; j++){
                 if (j == n){
                     res.append("\n");
