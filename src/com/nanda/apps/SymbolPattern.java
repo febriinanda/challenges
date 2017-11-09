@@ -1,0 +1,40 @@
+package com.nanda.apps;
+
+class SymbolPattern extends MyPattern{
+    SymbolPattern(int input) {
+        super(input);
+    }
+
+    void pattern1(){
+        /*
+        x x x
+         x x
+          x x
+           x
+            x
+         */
+
+        StringBuilder res = new StringBuilder();
+        int n = this.getInput();
+        for (int i = 0;i < n; i++){
+            int k = 1;
+            for(int j = 0; j <= n; j++){
+                if(j<i){
+                    res.append(" ");
+                }else{
+                    if(j == n){
+                        res.append("\n");
+                    }else{
+                        if (k % 2 == 0){
+                            res.append(" ");
+                        }else{
+                            res.append("x");
+                        }
+                        k++;
+                    }
+                }
+            }
+        }
+        this.setPattern(res.toString());
+    }
+}

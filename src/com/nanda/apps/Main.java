@@ -4,10 +4,10 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
+    SymbolPattern myPattern = new SymbolPattern(5);
+    myPattern.pattern1();
+    System.out.println(myPattern.getPattern());
 
-        NumberPattern patternObj = new NumberPattern(5);
-        patternObj.pattern10();
-        System.out.println(patternObj.getPattern());
 
     }
 }
