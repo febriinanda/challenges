@@ -1,27 +1,9 @@
 package com.nanda.apps;
 
-public class NumberPattern {
-    private int input;
-    private String pattern;
+public class NumberPattern extends MyPattern{
 
     NumberPattern(int input) {
-        this.input = input;
-    }
-
-    public int getInput() {
-        return input;
-    }
-
-    public void setInput(int input) {
-        this.input = input;
-    }
-
-    String getPattern() {
-        return pattern;
-    }
-
-    private void setPattern(String pattern) {
-        this.pattern = pattern;
+        super(input);
     }
 
     void pattern1(){
@@ -34,7 +16,7 @@ public class NumberPattern {
          */
 
         StringBuilder res = new StringBuilder();
-        int n = this.input;
+        int n = this.getInput();
         for (int i = 0; i < n; i++){
             int k = 1;
             for(int j = 0; j <= n; j++){
@@ -62,7 +44,7 @@ public class NumberPattern {
          */
 
         StringBuilder res = new StringBuilder();
-        int n = this.input;
+        int n = this.getInput();
         for(int i = 0; i < n; i++){
             int k=1;
             for (int j=0;j <= n + i; j++){
@@ -94,7 +76,7 @@ public class NumberPattern {
          */
 
         StringBuilder res = new StringBuilder();
-        int n = this.input;
+        int n = this.getInput();
         for(int i = 0;i < n; i++ ){
             int k = 1;
             for (int j = 0; j <= (n*2) - (i+1); j++){
@@ -129,7 +111,7 @@ public class NumberPattern {
             12345
          */
         StringBuilder res = new StringBuilder();
-        int n = this.input;
+        int n = this.getInput();
         for (int i = 0; i < (n*2)-1; i++){
             int k = n;
             if (i < n){
@@ -172,7 +154,7 @@ public class NumberPattern {
             5
          */
         StringBuilder res = new StringBuilder();
-        int n = this.input;
+        int n = this.getInput();
         for (int i = 0; i < n; i++){
             int k = n;
             for (int j = 0; j <= n; j++){
@@ -200,7 +182,7 @@ public class NumberPattern {
          */
 
         StringBuilder res = new StringBuilder();
-        int n = this.input;
+        int n = this.getInput();
         for (int i = 0;i < n; i++){
             int k = n - i;
             for (int j=0;j<=i+1;j++){
@@ -224,7 +206,7 @@ public class NumberPattern {
          */
 
         StringBuilder res = new StringBuilder();
-        int n = this.input;
+        int n = this.getInput();
         for(int i = 0; i < n; i++){
             for (int j = 0; j <= n; j++){
                 if (j == n){
@@ -247,7 +229,7 @@ public class NumberPattern {
          */
 
         StringBuilder res = new StringBuilder();
-        int n = this.input;
+        int n = this.getInput();
         for(int i = 0; i < n; i++){
             int k = i + 1;
             for(int j = 0; j <= n+1;j++){
@@ -275,7 +257,7 @@ public class NumberPattern {
          */
 
         StringBuilder res = new StringBuilder();
-        int n = this.input;
+        int n = this.getInput();
         for (int i = 0; i < n; i++){
             int k = 1;
             for (int j=0;j <= n + i; j++){
@@ -307,7 +289,7 @@ public class NumberPattern {
          */
 
         StringBuilder res = new StringBuilder();
-        int n = this.input;
+        int n = this.getInput();
         for (int i = 0; i < (n*2)-1; i++){
             int k=1;
             if (i < n){
