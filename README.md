@@ -95,3 +95,98 @@ output:
    121
     1
 ```
+
+## 2. Simple Symbol Pattern
+
+input:
+n integer ex:5
+
+output:
+#### Pattern 1
+```
+x x x
+ x x 
+  x x
+   x 
+    x
+```
+#### Pattern 2
+```
+    x
+   x x
+  x x x
+ x x x x
+x x o x x
+```
+#### Pattern 3
+```
+x x o x x
+ x x x x
+  x x x
+   x x
+    x
+```
+#### Pattern 4
+```
+o x x
+ o x 
+  o x
+   o 
+    o
+     o
+    x o
+     x o
+    x x o
+```
+#### Pattern 5
+```
+o x x
+ o x 
+  o x
+   o 
+    o
+```
+#### Pattern 6
+```
+o
+ o
+x o
+ x o
+x x o
+```
+#### Pattern 7
+```
+xxxxx
+     
+xxxxx
+     
+ooooo
+```
+#### Pattern 8
+```
+x x ox
+ x ox 
+x ox x
+ ox x 
+ox x o
+```
+#### Pattern 9
+```
+x x o
+ x x o
+  x x o
+   x x o
+    x x o
+```
+#### Pattern 10
+```
+    x
+   x x
+  x x x
+ x x x x
+x x o x x
+ x x x x
+  x x x
+   x x
+    x
+```
