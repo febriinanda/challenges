@@ -270,7 +270,6 @@ class SymbolPattern extends MyPattern{
                     res.append("\n");
                 }
             }
-
         }
         this.setPattern(res.toString());
     }
