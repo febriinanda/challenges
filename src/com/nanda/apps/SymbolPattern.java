@@ -212,4 +212,67 @@ class SymbolPattern extends MyPattern{
         }
         this.setPattern(res.toString());
     }
+
+    void pattern6(){
+        /*
+        o
+         o
+        x o
+         x o
+        x x o
+         */
+
+        StringBuilder res = new StringBuilder();
+        int n = this.getInput();
+        for (int i=0; i < n; i++){
+            int k = n - i;
+            for(int j=0; j < i + 1; j++){
+                if (k % 2 == 1){
+                    if (j == i){
+                        res.append("o");
+                        res.append("\n");
+                    }else{
+                        res.append("x");
+                    }
+                }else{
+                    res.append(" ");
+                }
+                k++;
+            }
+        }
+        this.setPattern(res.toString());
+    }
+
+    void pattern7(){
+        /*
+        xxxxx
+
+        xxxxx
+
+        ooooo
+         */
+        StringBuilder res = new StringBuilder();
+        int n = this.getInput();
+        for(int i = 0; i < n; i++){
+            int k = 0;
+            while(k < n){
+                if (i % 2 == 0){
+                    if (i == n - 1){
+                        res.append("o");
+                    }else{
+                        res.append("x");
+                    }
+                }else{
+                    res.append(" ");
+                }
+                k++;
+
+                if (k == n){
+                    res.append("\n");
+                }
+            }
+
+        }
+        this.setPattern(res.toString());
+    }
 }
