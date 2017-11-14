@@ -273,4 +273,17 @@ class SymbolPattern extends MyPattern{
         }
         this.setPattern(res.toString());
     }
+
+    void pattern8(){
+        /*
+        x x ox
+         x ox
+        x ox x
+         ox x
+        ox x o
+         */
+        StringBuilder res = new StringBuilder();
+        int n = this.getInput();
+        this.setPattern(res.toString());
+    }
 }
