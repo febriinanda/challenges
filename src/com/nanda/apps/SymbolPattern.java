@@ -130,7 +130,7 @@ class SymbolPattern extends MyPattern{
         for(int i = 0; i < (n*2)-1; i++){
             int k = 1;
             if(i < n){
-                for (int j = 0; j < n; j++){
+                for (int j = 0; j <= n - 1; j++){
                     if (j >= i){
                         if (k % 2 == 1){
                             if(k == 1){
@@ -142,6 +142,10 @@ class SymbolPattern extends MyPattern{
                             res.append(" ");
                         }
                         k++;
+
+                        if(j == n - 1){
+                            res.append("\n");
+                        }
                     }else{
                         res.append(" ");
                     }
