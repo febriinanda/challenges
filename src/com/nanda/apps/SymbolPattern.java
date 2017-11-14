@@ -128,6 +128,88 @@ class SymbolPattern extends MyPattern{
          */
         StringBuilder res = new StringBuilder();
         int n = this.getInput();
+        for(int i = 0; i < (n*2)-1; i++){
+            if(i < n){
+                int k = 1;
+                for (int j = 0; j <= n - 1; j++){
+                    if (j >= i){
+                        if (k % 2 == 1){
+                            if(k == 1){
+                                res.append("o");
+                            }else{
+                                res.append("x");
+                            }
+                        }else{
+                            res.append(" ");
+                        }
+                        k++;
+
+                        if(j == n - 1){
+                            res.append("\n");
+                        }
+                    }else{
+                        res.append(" ");
+                    }
+                }
+            }else{
+                int k = i - n;
+                for(int j = 0; j <= i; j++){
+                    if (j < n - 1){
+                        res.append(" ");
+                    }else{
+                        if (k % 2 == 0){
+                            res.append(" ");
+                        }else{
+                            if (j == i){
+                                res.append("o");
+                                res.append("\n");
+                            }else{
+                                res.append("x");
+                            }
+                        }
+                        k++;
+                    }
+                }
+            }
+        }
+        this.setPattern(res.toString());
+    }
+
+    void pattern5(){
+        /*
+        o x x
+         o x
+          o x
+           o
+            o
+         */
+        StringBuilder res = new StringBuilder();
+        int n = this.getInput();
+        for(int i = 0;i < n; i++){
+            int k = 0;
+            for (int j = 0; j < n;j++){
+                if (j > i - 1){
+                    if (k % 2 == 0){
+                        if (k == 0){
+                            res.append("o");
+                        }else{
+                            res.append("x");
+                        }
+                    }else{
+                        res.append(" ");
+                    }
+                    k++;
+
+                    if (j == n - 1){
+                        res.append("\n");
+                    }
+                }
+                else{
+                    res.append(" ");
+                }
+
+            }
+        }
         this.setPattern(res.toString());
     }
 }
