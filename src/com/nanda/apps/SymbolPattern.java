@@ -1,6 +1,7 @@
 package com.nanda.apps;
 
 class SymbolPattern extends MyPattern{
+
     SymbolPattern(int input) {
         super(input);
     }
