@@ -128,8 +128,8 @@ class SymbolPattern extends MyPattern{
         StringBuilder res = new StringBuilder();
         int n = this.getInput();
         for(int i = 0; i < (n*2)-1; i++){
-            int k = 1;
             if(i < n){
+                int k = 1;
                 for (int j = 0; j <= n - 1; j++){
                     if (j >= i){
                         if (k % 2 == 1){
@@ -151,7 +151,24 @@ class SymbolPattern extends MyPattern{
                     }
                 }
             }else{
-
+                int k = i - n;
+                for(int j = 0; j <= i; j++){
+                    if (j < n - 1){
+                        res.append(" ");
+                    }else{
+                        if (k % 2 == 0){
+                            res.append(" ");
+                        }else{
+                            if (j == i){
+                                res.append("o");
+                                res.append("\n");
+                            }else{
+                                res.append("x");
+                            }
+                        }
+                        k++;
+                    }
+                }
             }
         }
         this.setPattern(res.toString());
