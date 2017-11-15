@@ -285,6 +285,26 @@ class SymbolPattern extends MyPattern{
          */
         StringBuilder res = new StringBuilder();
         int n = this.getInput();
+        for(int i = 0; i < n; i++ ){
+            int k = i;
+            for (int j = 0; j <= n; j++ ){
+                if (k % 2 == 0){
+                    if (k == n - 1){
+                        res.append("o");
+                        k = -1;
+                    }else{
+                        res.append("x");
+                    }
+
+                }else{
+                    res.append(" ");
+                }
+                k++;
+                if (j == n){
+                    res.append("\n");
+                }
+            }
+        }
         this.setPattern(res.toString());
     }
 }
