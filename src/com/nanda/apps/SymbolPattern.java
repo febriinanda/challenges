@@ -287,4 +287,10 @@ class SymbolPattern extends MyPattern{
         int n = this.getInput();
         this.setPattern(res.toString());
     }
+
+    void pattern10(){
+        /*
+        
+         */
+    }
 }
