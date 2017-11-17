@@ -18,22 +18,54 @@ public class SymbolPatternTest {
          */
         SymbolPattern symbolObj = new SymbolPattern(5);
         symbolObj.pattern1();
-        StringBuilder expected = new StringBuilder();
-        expected.append("x x x\n");
-        expected.append(" x x \n");
-        expected.append("  x x\n");
-        expected.append("   x \n");
-        expected.append("    x\n");
+        String expected =   "x x x\n" +
+                            " x x \n" +
+                            "  x x\n" +
+                            "   x \n" +
+                            "    x\n";
 
-        Assert.assertEquals("Different result",expected.toString(),symbolObj.getPattern());
+        Assert.assertEquals("Different result", expected,symbolObj.getPattern());
     }
 
     @Test
     public void pattern2() throws Exception {
+        /*
+            x
+           x x
+          x x x
+         x x x x
+        x x o x x
+         */
+        SymbolPattern symbolObj = new SymbolPattern(5);
+        symbolObj.pattern2();
+        String expected =   "    x\n" +
+                            "   x x\n" +
+                            "  x x x\n" +
+                            " x x x x\n" +
+                            "x x o x x\n";
+
+        Assert.assertEquals("Different result", expected,symbolObj.getPattern());
+
     }
 
     @Test
     public void pattern3() throws Exception {
+        /*
+        x x o x x
+         x x x x
+          x x x
+           x x
+            x
+         */
+        SymbolPattern symbolObj = new SymbolPattern(5);
+        symbolObj.pattern3();
+        String expected =   "x x o x x\n" +
+                            " x x x x\n" +
+                            "  x x x\n" +
+                            "   x x\n" +
+                            "    x\n";
+
+        Assert.assertEquals("Different result", expected,symbolObj.getPattern());
     }
 
     @Test
