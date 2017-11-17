@@ -70,6 +70,30 @@ public class SymbolPatternTest {
 
     @Test
     public void pattern4() throws Exception {
+        /*
+        o x x
+         o x
+          o x
+           o
+            o
+             o
+            x o
+             x o
+            x x o
+         */
+        SymbolPattern symbolObj = new SymbolPattern(5);
+        symbolObj.pattern4();
+        String expected =   "o x x\n" +
+                            " o x \n" +
+                            "  o x\n" +
+                            "   o \n" +
+                            "    o\n" +
+                            "     o\n" +
+                            "    x o\n" +
+                            "     x o\n" +
+                            "    x x o\n";
+
+        Assert.assertEquals("Different result", expected,symbolObj.getPattern());
     }
 
     @Test
