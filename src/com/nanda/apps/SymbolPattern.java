@@ -343,4 +343,10 @@ class SymbolPattern extends MyPattern{
         }
         this.setPattern(res.toString());
     }
+
+    void pattern10(){
+        /*
+        
+         */
+    }
 }
