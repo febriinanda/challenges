@@ -1,19 +1,9 @@
 package com.nanda.apps;
 
-class NandaCls {
-    private int n;
-    private String pattern;
+public class NumberPattern extends MyPattern{
 
-    NandaCls(int n) {
-        this.n = n;
-    }
-
-    String getPattern(){
-        return this.pattern;
-    }
-
-    private void setPattern(String pattern) {
-        this.pattern = pattern;
+    NumberPattern(int input) {
+        super(input);
     }
 
     void pattern1(){
@@ -26,7 +16,7 @@ class NandaCls {
          */
 
         StringBuilder res = new StringBuilder();
-        int n = this.n;
+        int n = this.getInput();
         for (int i = 0; i < n; i++){
             int k = 1;
             for(int j = 0; j <= n; j++){
@@ -54,7 +44,7 @@ class NandaCls {
          */
 
         StringBuilder res = new StringBuilder();
-        int n = this.n;
+        int n = this.getInput();
         for(int i = 0; i < n; i++){
             int k=1;
             for (int j=0;j <= n + i; j++){
@@ -86,7 +76,7 @@ class NandaCls {
          */
 
         StringBuilder res = new StringBuilder();
-        int n = this.n;
+        int n = this.getInput();
         for(int i = 0;i < n; i++ ){
             int k = 1;
             for (int j = 0; j <= (n*2) - (i+1); j++){
@@ -121,21 +111,21 @@ class NandaCls {
             12345
          */
         StringBuilder res = new StringBuilder();
-        int n = this.n;
+        int n = this.getInput();
         for (int i = 0; i < (n*2)-1; i++){
-            int k = 5;
+            int k = n;
             if (i < n){
-               for (int j = 0; j <= n; j++){
-                   if (j == n){
-                       res.append("\n");
-                   }else{
-                       if (j > i - 1){
-                           res.append(k--);
-                       }else{
-                           res.append(" ");
-                       }
-                   }
-               }
+                for (int j = 0; j <= n; j++){
+                    if (j == n){
+                        res.append("\n");
+                    }else{
+                        if (j > i - 1){
+                            res.append(k--);
+                        }else{
+                            res.append(" ");
+                        }
+                    }
+                }
             }else{
                 k = k - (i - k + 1);
                 for (int j = 0; j <= (i + 1); j++){
@@ -164,9 +154,9 @@ class NandaCls {
             5
          */
         StringBuilder res = new StringBuilder();
-        int n = this.n;
+        int n = this.getInput();
         for (int i = 0; i < n; i++){
-            int k = 5;
+            int k = n;
             for (int j = 0; j <= n; j++){
                 if (j == n){
                     res.append("\n");
@@ -192,7 +182,7 @@ class NandaCls {
          */
 
         StringBuilder res = new StringBuilder();
-        int n = this.n;
+        int n = this.getInput();
         for (int i = 0;i < n; i++){
             int k = n - i;
             for (int j=0;j<=i+1;j++){
@@ -216,7 +206,7 @@ class NandaCls {
          */
 
         StringBuilder res = new StringBuilder();
-        int n = this.n;
+        int n = this.getInput();
         for(int i = 0; i < n; i++){
             for (int j = 0; j <= n; j++){
                 if (j == n){
@@ -239,7 +229,7 @@ class NandaCls {
          */
 
         StringBuilder res = new StringBuilder();
-        int n = this.n;
+        int n = this.getInput();
         for(int i = 0; i < n; i++){
             int k = i + 1;
             for(int j = 0; j <= n+1;j++){
@@ -267,7 +257,7 @@ class NandaCls {
          */
 
         StringBuilder res = new StringBuilder();
-        int n = this.n;
+        int n = this.getInput();
         for (int i = 0; i < n; i++){
             int k = 1;
             for (int j=0;j <= n + i; j++){
@@ -299,7 +289,7 @@ class NandaCls {
          */
 
         StringBuilder res = new StringBuilder();
-        int n = this.n;
+        int n = this.getInput();
         for (int i = 0; i < (n*2)-1; i++){
             int k=1;
             if (i < n){
@@ -338,6 +328,4 @@ class NandaCls {
         }
         this.setPattern(res.toString());
     }
-
-
 }
