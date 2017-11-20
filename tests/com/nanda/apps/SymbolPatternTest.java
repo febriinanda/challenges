@@ -6,6 +6,8 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class SymbolPatternTest {
+
+
     @Test
     public void pattern1() throws Exception {
         /*
@@ -172,6 +174,26 @@ public class SymbolPatternTest {
                             "x ox x\n" +
                             " ox x \n" +
                             "ox x o\n";
+
+        Assert.assertEquals("Different result", expected,symbolObj.getPattern());
+    }
+
+    @Test
+    public void pattern9() throws Exception {
+        /*
+        x x o
+         x x o
+          x x o
+           x x o
+            x x o
+         */
+        SymbolPattern symbolObj = new SymbolPattern(5);
+        symbolObj.pattern9();
+        String expected =   "x x o\n" +
+                            " x x o\n" +
+                            "  x x o\n" +
+                            "   x x o\n" +
+                            "    x x o\n";
 
         Assert.assertEquals("Different result", expected,symbolObj.getPattern());
     }
