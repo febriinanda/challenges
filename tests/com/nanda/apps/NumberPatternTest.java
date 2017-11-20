@@ -134,18 +134,88 @@ public class NumberPatternTest {
 
     @Test
     public void pattern7() throws Exception {
+        /*
+        11111
+        22222
+        33333
+        44444
+        55555
+         */
+        NumberPattern numberObj = new NumberPattern(5);
+        numberObj.pattern7();
+        String expected =   "11111\n" +
+                            "22222\n" +
+                            "33333\n" +
+                            "44444\n" +
+                            "55555\n";
+        Assert.assertEquals("Different result", expected,numberObj.getPattern());
+
     }
 
     @Test
     public void pattern8() throws Exception {
+        /*
+        123451
+        234512
+        345123
+        451234
+        512345
+         */
+        NumberPattern numberObj = new NumberPattern(5);
+        numberObj.pattern8();
+        String expected =   "123451\n" +
+                            "234512\n" +
+                            "345123\n" +
+                            "451234\n" +
+                            "512345\n";
+        Assert.assertEquals("Different result", expected,numberObj.getPattern());
     }
 
     @Test
     public void pattern9() throws Exception {
+        /*
+        12345
+         12345
+          12345
+           12345
+            12345
+         */
+        NumberPattern numberObj = new NumberPattern(5);
+        numberObj.pattern9();
+        String expected =   "12345\n" +
+                            " 12345\n" +
+                            "  12345\n" +
+                            "   12345\n" +
+                            "    12345\n";
+        Assert.assertEquals("Different result", expected,numberObj.getPattern());
     }
 
     @Test
     public void pattern10() throws Exception {
+        /*
+            1
+           121
+          12321
+         1234321
+        123454321
+         1234321
+          12321
+           121
+            1
+         */
+        NumberPattern numberObj = new NumberPattern(5);
+        numberObj.pattern10();
+        String expected =   "    1\n" +
+                            "   121\n" +
+                            "  12321\n" +
+                            " 1234321\n" +
+                            "123454321\n" +
+                            " 1234321\n" +
+                            "  12321\n" +
+                            "   121\n" +
+                            "    1\n";
+
+        Assert.assertEquals("Different result", expected,numberObj.getPattern());
     }
 
 }
