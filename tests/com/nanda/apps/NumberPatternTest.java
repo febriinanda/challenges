@@ -69,14 +69,67 @@ public class NumberPatternTest {
 
     @Test
     public void pattern4() throws Exception {
+        /*
+        54321
+         5432
+          543
+           54
+            5
+            45
+            345
+            2345
+            12345
+         */
+        NumberPattern numberObj = new NumberPattern(5);
+        numberObj.pattern4();
+        String expected =   "54321\n" +
+                            " 5432\n" +
+                            "  543\n" +
+                            "   54\n" +
+                            "    5\n" +
+                            "    45\n" +
+                            "    345\n" +
+                            "    2345\n" +
+                            "    12345\n";
+        Assert.assertEquals("Different result", expected,numberObj.getPattern());
     }
 
     @Test
     public void pattern5() throws Exception {
+        /*
+        54321
+         5432
+          543
+           54
+            5
+         */
+        NumberPattern numberObj = new NumberPattern(5);
+        numberObj.pattern5();
+        String expected =   "54321\n" +
+                            " 5432\n" +
+                            "  543\n" +
+                            "   54\n" +
+                            "    5\n" ;
+        Assert.assertEquals("Different result", expected,numberObj.getPattern());
     }
 
     @Test
     public void pattern6() throws Exception {
+        /*
+        5
+        45
+        345
+        2345
+        12345
+         */
+        NumberPattern numberObj = new NumberPattern(5);
+        numberObj.pattern6();
+        String expected =   "5\n" +
+                            "45\n" +
+                            "345\n" +
+                            "2345\n" +
+                            "12345\n";
+        Assert.assertEquals("Different result", expected,numberObj.getPattern());
     }
 
     @Test
